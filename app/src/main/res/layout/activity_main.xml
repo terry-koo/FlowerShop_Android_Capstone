@@ -7,8 +7,9 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/testText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="마지막 테스트" />
+        android:text="업데이트 텍스트" />
 
 </LinearLayout>
