@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
-        //dfssdfs
+        //구본성
         setContentView(R.layout.activity_main);
         a = findViewById(R.id.testText);
     }
