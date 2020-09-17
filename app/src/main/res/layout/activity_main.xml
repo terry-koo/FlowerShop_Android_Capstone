@@ -9,6 +9,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="안녕하세요 테스트 123123000" />
+        android:text="마지막 테스트" />
 
 </LinearLayout>
