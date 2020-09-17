@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         //구본성
+        //박진규
         setContentView(R.layout.activity_main);
         a = findViewById(R.id.testText);
     }
