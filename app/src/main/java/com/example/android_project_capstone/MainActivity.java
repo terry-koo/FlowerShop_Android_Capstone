@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_main);
         //구본성
         //박진규
+        //두번쨰 구본성
         setContentView(R.layout.activity_main);
         a = findViewById(R.id.testText);
     }
