@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
         //두번쨰 구본성
 
         setContentView(R.layout.activity_main);
-        a = findViewById(R.id.testText);
+
     }
 }
