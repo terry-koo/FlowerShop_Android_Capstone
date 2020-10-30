@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ProductDetail">
 
+    //2번째 엑티비티
+
 </androidx.constraintlayout.widget.ConstraintLayout>
