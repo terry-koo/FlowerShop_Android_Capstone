@@ -96,6 +96,32 @@
                 android:textColorHint="#ffffff" />
 
             <EditText
+                android:id="@+id/emailText4"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#DD9590"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:id="@+id/emailText5"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#DD9590"
+                android:hint="Birthday"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
                 android:id="@+id/emailText2"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
