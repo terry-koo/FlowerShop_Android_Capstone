@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Android_Project_Capstone</string>
+
+    <!--activity_cart_list.xml-->
+    <string name="str_order_state">상품 구매 상태</string>>
+
+
+    <!--activity_product_detail.xml-->
     <string name="str_purchaseBTN">구매 (장바구니 담기)</string>>
     <string name="str_imageDescription">상품 이미지</string>>
+
+
 </resources>
