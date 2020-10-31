@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="회원가입"
+                android:text="박사플로리스트 꽃꽃이"
                 android:textColor="#ffffff"
                 android:textSize="30dp"
                 android:textStyle="bold" />
