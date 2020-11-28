@@ -33,14 +33,22 @@ public class databaseTest extends AppCompatActivity {
         button2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String dataType = "type2";
-                try{
-                    String rst = new Task(dataType).execute(dataType,"12","male").get();
-                    Log.d("결과 :",rst);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ZProductManager.updateList();
+                        String a = ZProductManager.getzProductList().get(0).getTitle();
+                        String b = ZProductManager.getzProductList().get(0).getContent();
+                        Log.v("zTag", a+" "+b);
+                    }
+                }).start();
+
+
             }
         });
+
+
+
+
     }
 }
