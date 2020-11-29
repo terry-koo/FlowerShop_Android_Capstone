@@ -49,23 +49,16 @@ public class login extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        String dataType = "login";
+                        try{
+                            String rst = new Task(dataType).execute(dataType,id,password).get();
+                            Log.d("결과 :",rst);
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
 
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    String dataType = "login";
-                                    try{
-                                        String rst = new Task(dataType).execute(dataType,id,password).get();
-                                        Log.d("결과 :",rst);
-                                    }catch (Exception e){
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
                     }
                 }).start();
-
-
             }
         });
 
