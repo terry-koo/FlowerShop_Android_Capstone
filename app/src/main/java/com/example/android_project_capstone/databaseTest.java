@@ -2,6 +2,7 @@ package com.example.android_project_capstone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,21 +34,10 @@ public class databaseTest extends AppCompatActivity {
         button2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ZProductManager.updateList();
-                        String a = ZProductManager.getzProductList().get(0).getTitle();
-                        String b = ZProductManager.getzProductList().get(0).getContent();
-                        Log.v("zTag", a+" "+b);
-                    }
-                }).start();
-
-
+                Intent intent = new Intent(getApplicationContext(), ZMainProduct.class);
+                startActivity(intent);
             }
         });
-
-
 
 
     }
