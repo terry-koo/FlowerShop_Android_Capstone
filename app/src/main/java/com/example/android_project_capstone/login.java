@@ -44,6 +44,7 @@ public class login extends AppCompatActivity {
                     return;
                 }
 
+                //
                 //스레드사용
                 new Thread(new Runnable() {
                     @Override
