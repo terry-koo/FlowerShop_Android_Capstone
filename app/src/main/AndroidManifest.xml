@@ -12,19 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ZMainProduct"></activity>
-        <activity android:name=".databaseTest">
+        <activity android:name=".ZMainProduct">
+
+        </activity>
+        <activity android:name=".databaseTest"></activity>
+        <activity android:name=".cartList" />
+        <activity android:name=".joinAsMember" >
+
+        </activity>
+        <activity android:name=".login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cartList" />
-        <activity android:name=".joinAsMember" />
-        <activity android:name=".login" />
+
         <activity android:name=".ProductDetail" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

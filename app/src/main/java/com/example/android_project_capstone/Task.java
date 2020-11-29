@@ -12,9 +12,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Task extends AsyncTask<String, Void, String> {
-    public static String ip ="192.168.0.14:8080"; //IP번호
+    public static String ip ="192.168.0.5:8080"; //IP번호
     String sendMsg, receiveMsg;
-    String serverip = "http://"+ip+"/Database_Project_myBatis/android/list.jsp"; // 연결할 jsp주소
+    String serverip = "http://"+ip+"/Database_Project_myBatis/android/DBLink.jsp"; // 연결할 jsp주소
 
 
     Task(String sendmsg){
@@ -32,8 +32,8 @@ public class Task extends AsyncTask<String, Void, String> {
 
             if(sendMsg.equals("type1")){
                 sendMsg = "dataType="+strings[0]+"&num2="+strings[1]+"&num3="+strings[2];
-            }else if(sendMsg.equals("type2")){
-                sendMsg = "dataType="+strings[0]+"&age="+strings[1]+"&sex="+strings[2];
+            }else if(sendMsg.equals("login")){
+                sendMsg = "dataType="+strings[0]+"&id="+strings[1]+"&password="+strings[2];
             }else{
                 Log.d("sendMsg 값 :" ,"잘못된 파라미터");
             }
@@ -46,7 +46,9 @@ public class Task extends AsyncTask<String, Void, String> {
                 BufferedReader reader = new BufferedReader(tmp);
                 StringBuffer buffer = new StringBuffer();
                 while ((str = reader.readLine()) != null) {
-                    buffer.append(str);
+
+                        buffer.append(str);
+
                 }
                 receiveMsg = buffer.toString();
             } else {
