@@ -45,9 +45,14 @@ public class Task extends AsyncTask<String, Void, String> {
                 InputStreamReader tmp = new InputStreamReader(conn.getInputStream(), "UTF-8");
                 BufferedReader reader = new BufferedReader(tmp);
                 StringBuffer buffer = new StringBuffer();
+                boolean start = false;
                 while ((str = reader.readLine()) != null) {
-
+                   if(str.equals("|result=|")){
+                        start = true;
+                    }
+                    if(start) {
                         buffer.append(str);
+                    }
 
                 }
                 receiveMsg = buffer.toString();
