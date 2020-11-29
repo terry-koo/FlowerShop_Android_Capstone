@@ -18,6 +18,7 @@ import org.w3c.dom.Text;
 public class login extends AppCompatActivity {
     EditText idText,passwordText;
     AlertDialog dialog;
+    String rst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,18 +52,40 @@ public class login extends AppCompatActivity {
                     public void run() {
                         String dataType = "login";
                         try{
-                            String rst = new Task(dataType).execute(dataType,id,password).get();
+                            rst = new Task(dataType).execute(dataType,id,password).get();
                             Log.d("결과 :",rst);
+
+                            switch (rst) {
+                                case "LOGIN_SUCCESS":
+                                    Intent intent = new Intent(getApplicationContext(), ZMainProduct.class);
+                                    startActivity(intent);
+                                    break;
+                                case "LOGIN_FAIL":
+                                    runOnUiThread(new Runnable(){
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                    break;
+                            }
                         }catch (Exception e){
                             e.printStackTrace();
                         }
 
                     }
                 }).start();
+
+
             }
+
+
+
         });
 
-        //
+
+
+
         //회원가입
         TextView registerText = (TextView)findViewById(R.id.registerButton);
         registerText.setOnClickListener(new View.OnClickListener() {

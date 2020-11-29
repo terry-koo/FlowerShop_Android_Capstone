@@ -47,11 +47,13 @@ public class Task extends AsyncTask<String, Void, String> {
                 StringBuffer buffer = new StringBuffer();
                 boolean start = false;
                 while ((str = reader.readLine()) != null) {
-                   if(str.equals("|result=|")){
+                   if(str.equals("result=>")){
                         start = true;
+                        continue;
                     }
                     if(start) {
                         buffer.append(str);
+
                     }
 
                 }

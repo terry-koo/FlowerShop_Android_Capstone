@@ -13,12 +13,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".ZMainProduct">
-
         </activity>
         <activity android:name=".databaseTest"></activity>
         <activity android:name=".cartList" />
         <activity android:name=".joinAsMember" >
-
         </activity>
         <activity android:name=".login" >
             <intent-filter>
