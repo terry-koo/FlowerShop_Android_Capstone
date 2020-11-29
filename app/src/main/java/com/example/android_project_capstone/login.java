@@ -62,7 +62,7 @@ public class login extends AppCompatActivity {
             }
         });
 
-
+        //
         //회원가입
         TextView registerText = (TextView)findViewById(R.id.registerButton);
         registerText.setOnClickListener(new View.OnClickListener() {
