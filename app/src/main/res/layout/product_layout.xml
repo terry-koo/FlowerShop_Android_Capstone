@@ -7,44 +7,38 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="155dp"
+        android:layout_height="133dp"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/product1" />
 
     <TextView
         android:id="@+id/product_info"
-        android:layout_width="160dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="16dp"
-        android:text="상품이름\n
-상품 타입\n
-쿠폰 적용\n
-설정 가격\n
-"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:text="상품이름"
         android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/price_info"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="가격 :    원"
+        android:textAlignment="viewEnd"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/product_info" />
+        app:layout_constraintTop_toBottomOf="@+id/product_info"
+        android:gravity="end" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

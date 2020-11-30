@@ -4,15 +4,14 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.ArrayList;
 
 public class ZMainProductAdapter extends BaseAdapter {
@@ -55,15 +54,21 @@ public class ZMainProductAdapter extends BaseAdapter {
         TextView priceView = (TextView) convertView.findViewById(R.id.price_info);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
 
+        //정보 등록
 
+        NumberFormat krFormat = NumberFormat.getCurrencyInstance(Locale.KOREA);
         titleView.setText(zProductList.get(position).getTitle());
-        priceView.setText(zProductList.get(position).getPrice());
+        priceView.setText(krFormat.format(Integer.parseInt(zProductList.get(position).getPrice()))+"원");
 
+
+
+        //이미지 등록
         String base64String = zProductList.get(position).getPicture();
         String base64Image = base64String.split(",")[1];
         byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
         imageView.setImageBitmap(decodedByte);
+
 
 
         return convertView;

@@ -12,7 +12,8 @@ import java.net.URL;
 
 public class ZDBLink extends AsyncTask<String, Void, String> {
     public static String ip ="192.168.0.14:8080"; //IP번호
-    String sendMsg, receiveMsg;
+    String sendMsg;
+    String receiveMsg;
     String serverURI = "http://"+ip+"/Database_Project_myBatis/android/ZDBLink.jsp"; // 연결할 jsp주소
 
 
@@ -29,12 +30,11 @@ public class ZDBLink extends AsyncTask<String, Void, String> {
             conn.setRequestMethod("POST");
             OutputStreamWriter osw = new OutputStreamWriter(conn.getOutputStream());
 
-            if(sendMsg.equals("showZMainProduct")){
-                sendMsg = "opCode=showZMainProduct";
-
-            }
-            else{
-
+            //jsp 서버에서 opCode에 따라 결과를 리턴함.
+            switch (sendMsg){
+                case "showZMainProduct":
+                    sendMsg = "opCode=showZMainProduct";
+                    break;
             }
 
             //String값만 보낼수 있음

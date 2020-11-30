@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductDetail"
+    tools:context=".ZProductDetail"
     android:orientation="vertical"
     >
 
@@ -14,11 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="270dp"
         android:contentDescription="@string/str_imageDescription"
-        android:src="@drawable/product1" />
+        android:src="@drawable/product1"
+        android:layout_marginBottom="0dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@drawable/gradient" />
+        android:background="@drawable/gradient"
+        android:layout_marginTop="0dp"/>
 
     <TextView
         android:id="@+id/product_detail"
@@ -28,7 +30,11 @@
         상품이름 \n\
         (판매글 정보)\n
         각격대 3~10만원\n"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -40,15 +46,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="HTML 코드 해석해서 표시"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
     <RelativeLayout
-        android:id="@+id/purchaseBTN"
+
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="bottom">
 
         <Button
+            android:id="@+id/purchaseBTN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_light"
