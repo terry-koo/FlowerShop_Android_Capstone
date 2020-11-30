@@ -19,6 +19,7 @@ public class joinAsMember extends AppCompatActivity {
     private Button join_button, delete_button;
     private AlertDialog dialog;
     String rst;
+    public boolean click = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +40,13 @@ public class joinAsMember extends AppCompatActivity {
 
         //회원가입 버튼 클릭 시 수행
         join_button = findViewById( R.id.join_button );
-        join_button.setOnClickListener( new View.OnClickListener() {
+        join_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //DB결과에 따른 버튼 동기화
+                if(click) {
+                click = false;
+
                 final String UserEmail = join_email.getText().toString();
                 final String UserPwd = join_password.getText().toString();
                 final String UserName = join_name.getText().toString();
@@ -55,13 +60,15 @@ public class joinAsMember extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(joinAsMember.this);
                     dialog = builder.setMessage("모두 입력해주세요.").setNegativeButton("확인", null).create();
                     dialog.show();
+                    click = true;
                     return;
                 }
 
-                if(!UserPwd.equals(PassCk)){
+                if (!UserPwd.equals(PassCk)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(joinAsMember.this);
                     dialog = builder.setMessage("비밀번호가 다릅니다").setNegativeButton("확인", null).create();
                     dialog.show();
+                    click = true;
                     return;
                 }
 
@@ -70,33 +77,35 @@ public class joinAsMember extends AppCompatActivity {
                     @Override
                     public void run() {
                         String dataType = "register";
-                        try{
-                            rst = new Task(dataType).execute(dataType,UserEmail,UserPwd,UserName,UserAddress,UserPhone).get();
-                            Log.d("결과 :",rst);
+                        try {
+                            rst = new Task(dataType).execute(dataType, UserEmail, UserPwd, UserName, UserAddress, UserPhone).get();
+                            Log.d("결과 :", rst);
 
                             switch (rst) {
                                 //로그인 성공시
                                 case "REGISTER_SUCCESS":
-                                    runOnUiThread(new Runnable(){
+                                    runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             Toast.makeText(getApplicationContext(), "회원가입 완료", Toast.LENGTH_SHORT).show();
                                         }
                                     });
+                                    click = true;
                                     Intent intent = new Intent(getApplicationContext(), login.class);
                                     startActivity(intent);
                                     break;
                                 //로그인 실패시
                                 case "REGISTER_FAIL":
-                                    runOnUiThread(new Runnable(){
+                                    runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             Toast.makeText(getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT).show();
+                                            click = true;
                                         }
                                     });
                                     break;
                             }
-                        }catch (Exception e){
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
 
@@ -104,8 +113,10 @@ public class joinAsMember extends AppCompatActivity {
                 }).start();
 
 
+                }
             }
         });
+
 
         //취소버튼 클릭시
         delete_button = findViewById( R.id.delete );
