@@ -34,6 +34,8 @@ public class Task extends AsyncTask<String, Void, String> {
                 sendMsg = "dataType="+strings[0]+"&num2="+strings[1]+"&num3="+strings[2];
             }else if(sendMsg.equals("login")){
                 sendMsg = "dataType="+strings[0]+"&id="+strings[1]+"&password="+strings[2];
+            }else if(sendMsg.equals("register")){
+                sendMsg = "dataType="+strings[0]+"&id="+strings[1]+"&password="+strings[2]+"&name="+strings[3]+"&address="+strings[4]+"&phone="+strings[5];
             }else{
                 Log.d("sendMsg 값 :" ,"잘못된 파라미터");
             }

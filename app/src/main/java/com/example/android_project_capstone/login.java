@@ -45,7 +45,7 @@ public class login extends AppCompatActivity {
                     return;
                 }
 
-                //
+
                 //스레드사용
                 new Thread(new Runnable() {
                     @Override
@@ -56,10 +56,12 @@ public class login extends AppCompatActivity {
                             Log.d("결과 :",rst);
 
                             switch (rst) {
+                                //로그인 성공시
                                 case "LOGIN_SUCCESS":
                                     Intent intent = new Intent(getApplicationContext(), ZMainProduct.class);
                                     startActivity(intent);
                                     break;
+                                //로그인 실패시
                                 case "LOGIN_FAIL":
                                     runOnUiThread(new Runnable(){
                                         @Override
@@ -82,7 +84,6 @@ public class login extends AppCompatActivity {
 
 
         });
-
 
 
 
