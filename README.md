@@ -44,3 +44,6 @@
 
 2. 어플리케이션 및 웹 홈페이지 사용자 부족 -> 지속적인 홍보수단 필요
 
+## 6. 연동되어 있는 웹 홈페이지
+[웹 홈페이지](https://github.com/terry-koo/SeedShop_Website_AWS)
+
