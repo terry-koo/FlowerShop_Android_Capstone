@@ -24,7 +24,6 @@
 
 ## 3. 어플리케이션 레이아웃
 ![image](https://user-images.githubusercontent.com/67509011/147095575-01065d00-725a-4fcc-824a-8b455d6a0e24.png)
-
 ![image](https://user-images.githubusercontent.com/67509011/147095614-223c6250-a089-4097-9f77-91d03ca17277.png)
 ![image](https://user-images.githubusercontent.com/67509011/147095629-e0ee0fbf-46d7-4838-aaf7-7b70186db457.png)
 ![image](https://user-images.githubusercontent.com/67509011/147095638-9f6cab10-11e8-49a2-8816-1118b47bc8e9.png)
@@ -40,4 +39,8 @@
 :point_right:[박사플로리스트 바로가기](https://play.google.com/store/apps/details?id=yc.ac.kr.drflower)  
 ![image](https://user-images.githubusercontent.com/67509011/147097304-6616ec32-a0d5-4e28-bbf3-090f49e834fe.png)
 
+## 5. 보완해야 할 사항
+1. Azure클라우드 서비스에 3시간동안 요청이 없을 경우 서버가 자동 종료되기 때문에 서버 종료 후 어플리케이션 처음 구동 시 딜레이가 발생 -> 요금제 upgrade로 해결 가능
+
+2. 어플리케이션 및 웹 홈페이지 사용자 부족 -> 지속적인 홍보수단 필요
 
