@@ -1,5 +1,5 @@
 # FlowerShop_Android_Capstone
-🌻진주시 소상공인과 함께 수행한 안드로이드 어플리케이션 제작
+🌻소상공인과 함께 수행한 안드로이드 어플리케이션 제작
 
 ## 1. 기술 
 - Skill stack 
